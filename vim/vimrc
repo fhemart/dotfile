@@ -6,8 +6,7 @@ syntax on
 set number
 set nocp
 source ~/dotfile/vim/autoload/pathogen.vim
-source ~/dotfile/vim/vimrc
-call pathogen#infect()
+call pathogen#infect('~/dotfile/vim/bundles/{}')
 call pathogen#helptags()
 
 map <C-n> :NERDTreeToggle<CR>
