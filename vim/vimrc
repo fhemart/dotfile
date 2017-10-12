@@ -2,11 +2,12 @@ if has("autocmd")
 	autocmd! bufwritepost .vimrc source ~/.vimrc
 endif
 
-syntax on
-set number
 set nocp
 source ~/dotfile/vim/autoload/pathogen.vim
 call pathogen#infect('~/dotfile/vim/bundle/{}')
 call pathogen#helptags()
+
+syntax on
+set number
 
 map <C-n> :NERDTreeToggle<CR>
