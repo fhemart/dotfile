@@ -1,5 +1,5 @@
 if has("autocmd")
-	autocmd! bufwritepost .vimrc source ~/.vimrc
+        autocmd! bufwritepost .vimrc source ~/.vimrc
 endif
 
 set nocp
@@ -7,7 +7,25 @@ source ~/dotfile/vim/autoload/pathogen.vim
 call pathogen#infect('~/dotfile/vim/bundle/{}')
 call pathogen#helptags()
 
+let g:vimwiki_list = [
+                        \{'path': '~/dotfile/vim/vimwiki/personal.md'}
+                    \]
+filetype on
+filetype plugin on
 syntax on
+set t_Co=256
+source ~/dotfile/vim/colors/mrkn256.vim
 set number
-
-map <C-n> :NERDTreeToggle<CR>
+set hidden
+set history=500
+filetype indent on
+set nowrap
+set expandtab
+set smartindent
+set autoindent
+autocmd BufWritePre * :%s/\s\+$//e
+set hlsearch
+set laststatus=2
+set noshowmode
+let mapleader=' '
+map <leader>n :NERDTreeToggle<CR>
