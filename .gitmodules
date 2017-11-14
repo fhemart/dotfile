@@ -16,3 +16,6 @@
 [submodule "zsh/oh-my-zsh"]
 	path = zsh/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "/Users/fhemart/dotfile/vim/bundle/42header.vim"]
+	path = /Users/fhemart/dotfile/vim/bundle/42header.vim
+	url = https://github.com/pandark/42header.vim.git
